@@ -1,5 +1,6 @@
 # React Store App (React: 16.14.0)
-#### Repo cloned from [react-store-05](https://github.com/tom2kota/react-store-05)
+#### Repo cloned from [react-store-10](https://github.com/tom2kota/react-store-10)
+#### ex Repo cloned from [react-store-05](https://github.com/tom2kota/react-store-05)
 Develop React e-commerce project with:
 - Stripe payment (test mode)
 - Firebase Authentication 
