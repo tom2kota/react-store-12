@@ -17,7 +17,7 @@ TODO:
 - add useContext
 
 E-commerce project DEMO:
-- [Client](https://react-store-10.vercel.app)
+- [Client](https://react-store-12.vercel.app)
 - [Server](https://react-store-express-server.herokuapp.com) or [Clone repo & run server on localhost](https://github.com/tom2kota/react-store-server)
 - [Stripe Dashboard](https://dashboard.stripe.com/test/dashboard)
 - [Firebase](https://console.firebase.google.com)
