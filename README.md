@@ -22,6 +22,25 @@ E-commerce project DEMO:
 - [Stripe Dashboard](https://dashboard.stripe.com/test/dashboard)
 - [Firebase](https://console.firebase.google.com)
 
+---------------
+
+## [Code Splitting](https://create-react-app.dev/docs/code-splitting/)
+
+
+links:
+- [404-illustrations](https://www.kapwing.com/404-illustrations)
+- [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
+- [React.memo](https://reactjs.org/docs/react-api.html#reactmemo)
+- [React.PureComponent](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
+- [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
+- [compression](https://www.npmjs.com/package/compression)
+- [react-profiling](https://reactjs.org/docs/profiler.html#usage)
+- [progressive react](https://houssein.me/progressive-react)
+
+---------------
+
 
 ``` 
     npm run start
