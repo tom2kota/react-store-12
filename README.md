@@ -41,6 +41,13 @@ links:
 
 ---------------
 
+## React lazy
+
+React.lazy currently only supports default exports
+- [link](https://reactjs.org/docs/code-splitting.html#named-exports)
+
+---------------
+
 
 ``` 
     npm run start

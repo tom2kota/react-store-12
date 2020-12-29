@@ -4,7 +4,7 @@ import {StripeCheckoutButton} from "../../components/stripe-button/StripeButton"
 import {CartContext} from "../../providers/cart/cartProvider";
 import './CheckoutPage.scss'
 
-export const CheckoutPage = () => {
+const CheckoutPage = () => {
     const {cartItems, cartTotal} = useContext(CartContext)
 
     return (
@@ -42,3 +42,4 @@ export const CheckoutPage = () => {
         </div>
     )
 }
+export default CheckoutPage
