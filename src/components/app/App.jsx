@@ -3,12 +3,13 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import {Header} from "../header/Header";
 import {auth, createUserProfileDocument} from "../../firebase/firebase.utils";
 import {UserContext} from "../../contexts/user/userContext";
+import Spinner from "../spinner/Spinner";
 
 const HomePage = lazy(() => import('../../pages/home/HomePage'))
 const ShopPage = lazy(() => import('../../pages/shop/ShopPage'))
 const ContactPage = lazy(() => import('../../pages/contact/ContactPage'))
 const SignInUp = lazy(() => import('../../pages/sign-in-up/SignInUp'))
-const CheckoutPage  = lazy(()=>import('../../pages/checkout/CheckoutPage'))
+const CheckoutPage = lazy(() => import('../../pages/checkout/CheckoutPage'))
 
 export class App extends Component {
     state = {currentUser: null}
@@ -44,7 +45,7 @@ export class App extends Component {
                         <Header/>
                     </UserContext.Provider>
                     <Switch>
-                        <Suspense fallback={<div>Loading ...</div>}>
+                        <Suspense fallback={<Spinner/>}>
                             <Route exact path="/" component={HomePage}/>
                             <Route path="/shop" component={ShopPage}/>
                             <Route path="/contact" component={ContactPage}/>
