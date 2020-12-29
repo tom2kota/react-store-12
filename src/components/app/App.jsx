@@ -4,6 +4,7 @@ import {Header} from "../header/Header";
 import {auth, createUserProfileDocument} from "../../firebase/firebase.utils";
 import {UserContext} from "../../contexts/user/userContext";
 import Spinner from "../spinner/Spinner";
+import ErrorBoundary from "../error-boundary/ErrorBoundary";
 
 const HomePage = lazy(() => import('../../pages/home/HomePage'))
 const ShopPage = lazy(() => import('../../pages/shop/ShopPage'))
@@ -45,14 +46,16 @@ export class App extends Component {
                         <Header/>
                     </UserContext.Provider>
                     <Switch>
-                        <Suspense fallback={<Spinner/>}>
-                            <Route exact path="/" component={HomePage}/>
-                            <Route path="/shop" component={ShopPage}/>
-                            <Route path="/contact" component={ContactPage}/>
-                            <Route exact path="/signin"
-                                   render={() => this.state.currentUser ? <Redirect to='/'/> : <SignInUp/>}/>
-                            <Route exact path="/checkout" component={CheckoutPage}/>
-                        </Suspense>
+                        <ErrorBoundary>
+                            <Suspense fallback={<Spinner/>}>
+                                <Route exact path="/" component={HomePage}/>
+                                <Route path="/shop" component={ShopPage}/>
+                                <Route path="/contact" component={ContactPage}/>
+                                <Route exact path="/signin"
+                                       render={() => this.state.currentUser ? <Redirect to='/'/> : <SignInUp/>}/>
+                                <Route exact path="/checkout" component={CheckoutPage}/>
+                            </Suspense>
+                        </ErrorBoundary>
                     </Switch>
                 </BrowserRouter>
             </div>
