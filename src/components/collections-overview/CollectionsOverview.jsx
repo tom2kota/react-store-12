@@ -3,7 +3,7 @@ import CollectionPreview from "../collection-preview/CollectionPreview";
 import {ShopDataContext} from "../../contexts/shop/shopContext";
 import './CollectionsOverview.scss';
 
-export const CollectionsOverview = () => {
+const CollectionsOverview = () => {
     const collectionsMap = useContext(ShopDataContext)
     const collections = Object.keys(collectionsMap).map(key => collectionsMap[key])
 
@@ -16,3 +16,4 @@ export const CollectionsOverview = () => {
         </div>
     )
 }
+export default CollectionsOverview

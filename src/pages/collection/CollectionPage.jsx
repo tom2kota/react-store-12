@@ -3,7 +3,7 @@ import {CollectionItem} from "../../components/collection-item/CollectionItem";
 import {ShopDataContext} from "../../contexts/shop/shopContext";
 import './CollectionPage.scss'
 
-export const CollectionPage = ({match}) => {
+const CollectionPage = ({match}) => {
     const collections = useContext(ShopDataContext)
     const collection = collections[match.params.collectionId]
     const {title, items} = collection
@@ -17,3 +17,5 @@ export const CollectionPage = ({match}) => {
         </div>
     )
 }
+
+export default CollectionPage

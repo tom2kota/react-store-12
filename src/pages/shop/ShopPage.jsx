@@ -1,13 +1,17 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import {Route} from "react-router-dom";
-import {CollectionsOverview} from "../../components/collections-overview/CollectionsOverview";
-import {CollectionPage} from "../collection/CollectionPage";
+import Spinner from "../../components/spinner/Spinner";
 import './ShopPage.scss';
+
+const CollectionsOverview = lazy(() => import('../../components/collections-overview/CollectionsOverview'))
+const CollectionPage = lazy(() => import('../collection/CollectionPage'))
 
 const ShopPage = ({match}) => (
     <div className='shop-page'>
-        <Route exact path={`${match.path}`} component={CollectionsOverview}/>
-        <Route path={`${match.path}/:collectionId`} component={CollectionPage}/>
+        <Suspense fallback={<Spinner/>}>
+            <Route exact path={`${match.path}`} component={CollectionsOverview}/>
+            <Route path={`${match.path}/:collectionId`} component={CollectionPage}/>
+        </Suspense>
     </div>
 )
 
